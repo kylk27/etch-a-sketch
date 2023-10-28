@@ -117,20 +117,14 @@ function rainbowPen() {
     rainbowBtn.classList.add('active');
     
     grid.addEventListener('mousedown', (e) => {
-        const red = randomValue();
-        const blue = randomValue();
-        const green = randomValue();
-        e.target.style.backgroundColor = `rgb(${red}, ${blue}, ${green})`;
+        e.target.style.backgroundColor = `rgb(${randomValue()}, ${randomValue()}, ${randomValue()})`;
     });
 
     body.addEventListener('mousedown', () => {
         isTrue = true;
         grid.addEventListener('mouseover', (e) => {
-            const red = randomValue();
-            const blue = randomValue();
-            const green = randomValue();
             if(isTrue) {
-                e.target.style.backgroundColor = `rgb(${red}, ${blue}, ${green})`;
+                e.target.style.backgroundColor = `rgb(${randomValue()}, ${randomValue()}, ${randomValue()})`;
             };
         });
     });
